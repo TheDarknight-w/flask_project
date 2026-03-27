@@ -14,7 +14,7 @@ def home():
 
 @app.route('/api', methods=['GET'])
 def api():
-    return jsonify({"message": "Hello API"})
+    return jsonify({"message": "Updated Api","status":"success","branch":"joel_new"})
 
 @app.route('/submittodoitem', methods=['POST'])
 def submit():
