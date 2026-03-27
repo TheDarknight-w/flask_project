@@ -4,7 +4,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # MongoDB Connection
-client = MongoClient("mongodb+srv://joelchinta7_db_user:Poke89012@cluster2.owf086t.mongodb.net/?appName=Cluster2")
+client = MongoClient("mongodb+srv://joelchinta7_db_user:<db_pass>2@cluster2.owf086t.mongodb.net/?appName=Cluster2")
 db = client["todo_db"]
 collection = db["items"]
 
