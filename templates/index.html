@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>To-Do Form</h2>
+
+    <form id="form">
+        <input id="name" placeholder="Item Name"><br>
+        <input id="desc" placeholder="Item Description"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            await fetch("/submittodoitem", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    itemName: name.value,
+                    itemDescription: desc.value
+                })
+            });
+
+            alert("Saved!");
+        });
+    </script>
+</body>
+</html>
