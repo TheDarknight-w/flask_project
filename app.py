@@ -7,7 +7,7 @@ app = Flask(__name__)
 client = MongoClient("mongodb+srv://joelchinta7_db_user:<db_pass>2@cluster2.owf086t.mongodb.net/?appName=Cluster2")
 db = client["todo_db"]
 collection = db["items"]
-
+#index.html contains itemid and description and data goes to mongo db
 @app.route('/')
 def home():
     return render_template('index.html')
